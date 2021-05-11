@@ -13,8 +13,13 @@ get '/page2' do
     "Welcome to page 2"
 end
 
-get '/cat' do 
-    "<div style ='border: 3px dashed red'>
-        <img src = 'https://i.imgur.com/jFaSxym.png'>
-    </div>"
+get '/random-cat' do 
+    @name = ["Amigo", "Misty", "Almond"].sample
+    erb(:index)
 end
+
+get '/named-cat' do 
+    p params
+    @name = params[:name]
+    erb(:index)
+end 

@@ -9,9 +9,15 @@
 </head>
 <body>
 
-<%= @player1.name %> attacked <%= @player2.name %>
+<% if @game.current_turn == @game.player1 %>
+<%= @game.player1.name %> attacked <%= @game.player2.name %>
+<% else %>
+<%= @game.player2.name %> attacked <%= @game.player1.name %>
+<% end %>
 
-<a href="/play">Return</a>
+<form action="/switch-turns" method="post">
+    <input type="submit" value="OK">
+</form>
 
 </body>
 </html>

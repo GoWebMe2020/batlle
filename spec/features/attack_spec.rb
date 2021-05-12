@@ -12,8 +12,21 @@ feature 'Attack' do
     scenario 'deduct attack value from player 2 HP' do
         sign_in_and_play
         click_button 'Attack'
-        click_link 'OK'
+        click_button 'OK'
         expect(page).not_to have_content 'Kong: 100HP'
         expect(page).to have_content 'Kong: 90HP'
+    end
+
+    # As Player 1,
+    # So I can start to lose a game of Battle,
+    # I want Player 2's attack to reduce my HP by 10
+    scenario 'deduct Players 1 health by 10' do
+        sign_in_and_play
+        click_button 'Attack'
+        click_button 'OK'
+        click_button 'Attack'
+        click_button 'OK'
+        expect(page).not_to have_content 'Godzilla: 100HP'
+        expect(page).to have_content 'Godzilla: 90HP'
     end
 end

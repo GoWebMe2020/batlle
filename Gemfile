@@ -6,6 +6,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 group :development do 
   gem "rspec"
+  gem "rspec-sinatra"
   gem "sinatra"
   gem "webrick"
   gem "sinatra-contrib"

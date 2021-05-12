@@ -4,23 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 <body>
 
-    <div>
-        <h3>Are You Ready To</h3>
-        <h1>BATTLE!!!</h1>
+    <div class="land_page">
+        <div class="head_display">
+            <div class="main_headings">
+                <h3>Are You Ready To</h3>
+                <h1>BATTLE!!!</h1>
+                <h3>Contenders, Enter Your Names</h3>
+            </div>
+        </div>
+    
+        <div class="land_page_form">
+            <form action="/names" method="post">
+                <div class="input_bar">
+                    <label for="player1">1st Contender</label><br>
+                    <input type="text" id="player1" name="player1">
+                </div>
+                <div class="input_bar">
+                    <label for="player2">2nd Contender</label><br>
+                    <input type="text" id="player2" name="player2" >
+                </div>
+                <div class="fight_button">
+                    <input type="submit" value="FIGHT!">
+                </div>
+            </form>
+        </div>
+        
     </div>
 
-    <form action="/names" method="post">
-        <label for="player1">1st Contender</label>
-        <input type="text" id="player1" name="player1">
-        <label for="player2">2nd Contender</label>
-        <input type="text" id="player2" name="player2" >
-        <input type="submit" value="FIGHT!">
-    </form>
+    
     
 </body>
 </html>

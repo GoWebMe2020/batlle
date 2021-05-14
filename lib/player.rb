@@ -9,12 +9,16 @@ class Player
         @health = health
     end
 
-    # def attack(player)
-    #     player.receive_damage
-    # end
+    def receive_damage(amount)
+        @health -= amount
+    end
 
-    def receive_damage
-        @health -= rand(500..1000)
+    def receive_health(amount)
+        @health += amount
+    end
+
+    def computer?
+        false
     end
 
 end

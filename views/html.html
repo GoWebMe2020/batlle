@@ -11,44 +11,20 @@
 </head>
 <body>
 
-<div class="land_page_play">
-
-    <div class="three_boxes">
-        <div class="box_left">
-            <h3><%= @game.player1.name %>: <%= @game.player1.health %>HP</h3>
-            <progress style="width: 500px; height: 40px;"id="file" max="100" value="<%= @game.player1.health %>"></progress>
-            <img src="https://i.pinimg.com/originals/d5/8d/d2/d58dd281de0f27fe36ca3ecbcbcc01a7.jpg" alt="">
-        </div>
-        <div class="box_center">
-            <h3><%= @game.current_turn.name %>'s Turn</h3>
-            <h2>VS</h2>
-        </div>
-        <div class="box_right">
-            <h3><%= @game.player2.name %>: <%= @game.player2.health %>HP</h3>
-            <progress style="width: 500px; height: 40px;"id="file" max="100" value="<%= @game.player2.health %>"></progress>
-        </div>
+<div class="land_page_conf">
+    <div>
+        <% if @game.current_turn == @game.player1 %>
+            <h1><%= @game.player1.name %> attacked <%= @game.player2.name %></h1>
+        <% else %>
+            <h1><%= @game.player2.name %> attacked <%= @game.player1.name %></h1>
+        <% end %>
     </div>
-        <!-- <div class="head_display">
-            <div class="main_headings">
-                <h3><%= @game.current_turn.name %>'s Turn</h3>
-                <h1><%= @game.player1.name %> vs <%= @game.player2.name %> <br></h1>
-                
-                <h3><%= @game.player1.name %>: <%= @game.player1.health %>HP</h3>
-                <progress style="width: 500px; height: 40px;"id="file" max="100" value="<%= @game.player1.health %>"></progress>
-                <h3><%= @game.player2.name %>: <%= @game.player2.health %>HP</h3>
-                <progress style="width: 500px; height: 40px;"id="file" max="100" value="<%= @game.player2.health %>"></progress>
-            </div>
-        </div> -->
-
-        <div class="land_page_form">
-            <form action="/attack">
-               <div class="fight_button">
-                  <input type="submit" value="Attack">
-               </div>
-            </form>
-        </div>
-        
+    <div>
+        <form action="/switch-turns" method="post">
+            <input type="submit" value="OK">
+        </form>
     </div>
+</div>
     
 
 

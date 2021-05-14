@@ -15,7 +15,7 @@ body {
     flex-direction: column;
     text-align: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('https://i.pinimg.com/originals/e3/32/4f/e3324fa0efb97657f61ca5995556fdd3.jpg');
     background-size: cover;
     mask-repeat: no-repeat;
@@ -28,12 +28,12 @@ body {
 }
 
 .main_headings h3 {
-    font-size: 4em;
+    font-size: 2vw;
     text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.6);
 }
 
 .main_headings h1 {
-    font-size: 12em;
+    font-size: 6vw;
     text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.6);
 }
 
@@ -44,7 +44,7 @@ body {
 }
 
 .input_bar label {
-    font-size: 1.7em;
+    font-size: 1.5vw;
     color: red;
     text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.6);
 }
@@ -68,16 +68,25 @@ body {
     text-align: center;
 }
 
-.fight_button input{
+.fight_button input {
     font-family: 'Permanent Marker', cursive;
     background-color: #333;
     border-radius: 25px;
     color: red;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.6);
+    border: none;
     height: 50px;
     width: 40%;
     margin: 20px 0;
     font-size: 1.8em;
     letter-spacing: 5px;
+    transition: 0.5s ease;
+}
+
+.fight_button input:hover {
+    background-color: red;
+    box-shadow: 8px 8px 8px rgba(250, 0, 0, 0.6);
+    color: #333;
 }
 
 /* PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY */
@@ -88,17 +97,16 @@ body {
     flex-direction: column;
     text-align: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('https://www.wallpaperflare.com/static/476/1005/194/elder-scrolls-5-skyrim-battle-viking-wallpaper.jpg');
     background-size: cover;
     mask-repeat: no-repeat;
     box-shadow: inset 3500px 0 0 0 rgba(0, 0, 0, 0.7);
     border-color: rgba(0, 0, 0, 1);
-    color: #fff;
 }
 
 .land_page_play h1 {
-    font-size: 3em;
+    font-size: 2vw;
     color: red;
 }
 
@@ -108,14 +116,14 @@ body {
 }
 
 .three_boxes h3 {
-    font-size: 3em;
+    font-size: 2.5vw;
     color: red;
 }
 
 .box_left {
     width: 33%;
     height: 60vh;
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
 .box_left img {
@@ -125,7 +133,7 @@ body {
 
 .box_center {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
     text-align: center;
     width: 33%;
@@ -135,7 +143,7 @@ body {
     display: flex;
     flex-direction: column-reverse;
     width: 33%;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 
 .box_right img {
@@ -149,3 +157,101 @@ body {
     margin-right: auto;
 }
 
+/* CONFIRMATION PAGE CONFIRMATION PAGE CONFIRMATION PAGE CONFIRMATION PAGE CONFIRMATION PAGE */
+
+.land_page_conf {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('https://www.wallpaperflare.com/static/476/1005/194/elder-scrolls-5-skyrim-battle-viking-wallpaper.jpg');
+    background-size: cover;
+    mask-repeat: no-repeat;
+    box-shadow: inset 3500px 0 0 0 rgba(0, 0, 0, 0.7);
+    border-color: rgba(0, 0, 0, 1);
+}
+
+.land_page_conf h1 {
+    font-size: 5vw;
+    color: red;
+}
+
+.ok_button input {
+    font-family: 'Permanent Marker', cursive;
+    background-color: #333;
+    border-radius: 25px;
+    color: red;
+    border: none;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.6);
+    height: 50px;
+    width: 40%;
+    margin: 20px 0;
+    font-size: 1.8em;
+    letter-spacing: 5px;
+    transition: 0.5s ease;
+}
+
+.ok_button input:hover {
+    background-color: red;
+    box-shadow: 8px 8px 8px rgba(250, 0, 0, 0.6);
+    color: #333;
+}
+
+/* GAME OVER GAME OVER GAME OVER GAME OVER GAME OVER GAME OVER GAME OVER GAME OVER GAME OVER */
+
+.land_page_lose {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('https://wallpaperaccess.com/full/407748.jpg');
+    background-size: cover;
+    mask-repeat: no-repeat;
+    box-shadow: inset 3500px 0 0 0 rgba(0, 0, 0, 0.7);
+    border-color: rgba(0, 0, 0, 1);
+}
+
+.restart_button input {
+    font-family: 'Permanent Marker', cursive;
+    background-color: #333;
+    border-radius: 25px;
+    color: red;
+    border: none;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.6);
+    height: 10px;
+    width: 10%;
+    margin: 20px 0;
+    font-size: 0.3vw;
+    letter-spacing: 1.2px;
+    transition: 2s ease;
+}
+
+.land_page_lose h1 {
+    font-size: 0.5vw;
+    margin: 100px;
+    color: red;
+    transition: 2s ease;
+}
+
+.land_page_lose h2 {
+    font-size: 0.5vw;
+    margin: 100px;
+    color: red;
+    transition: 2s ease-in-out;
+}
+
+.land_page_lose h1 {
+    transform: scale(5);
+}
+
+.land_page_lose h2 {
+    transform: scale(5);
+}
+
+.restart_button input, .land_page_lose h1, .land_page_lose h2 {
+    transform: scale(5);
+}

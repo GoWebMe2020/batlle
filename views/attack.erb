@@ -4,20 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 <body>
 
-<% if @game.current_turn == @game.player1 %>
-<%= @game.player1.name %> attacked <%= @game.player2.name %>
-<% else %>
-<%= @game.player2.name %> attacked <%= @game.player1.name %>
-<% end %>
-
-<form action="/switch-turns" method="post">
-    <input type="submit" value="OK">
-</form>
+    <div class="land_page_conf">
+        <div>
+            <% if @game.current_turn == @game.player1 %>
+                <h1><%= @game.player1.name %> attacked <%= @game.player2.name %></h1>
+            <% else %>
+                <h1><%= @game.player2.name %> attacked <%= @game.player1.name %></h1>
+            <% end %>
+        </div>
+        <div class="ok_button">
+            <form action="/switch-turns" method="post">
+                <input type="submit" value="OK">
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>

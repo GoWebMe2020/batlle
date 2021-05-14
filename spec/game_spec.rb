@@ -29,7 +29,7 @@ describe Game do
     end
 
     describe '#opponent_of' do
-        it 'egts the opponent of a player' do
+        it 'gets the opponent of a player' do
             expect(game.opponent_of(player1)).to eq(player2)
             expect(game.opponent_of(player2)).to eq(player1)
         end

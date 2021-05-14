@@ -19,8 +19,13 @@ describe Player do
 
     describe '#receive_damage' do
         it 'deducts health from the player under attack' do
-            allow(godzilla).to receive(:rand).and_return(500)
-            expect { godzilla.receive_damage }.to change { godzilla.health }.by(-500)
+            expect { godzilla.receive_damage(500) }.to change { godzilla.health }.by(-500)
+        end
+    end
+
+    describe '#receive_health' do
+        it 'increase health from the player under attack' do
+            expect { godzilla.receive_health(500) }.to change { godzilla.health }.by(+500)
         end
     end
 end

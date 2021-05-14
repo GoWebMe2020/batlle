@@ -8,7 +8,7 @@ feature 'Game Over' do
 
         scenario 'Player 1 Loses' do
             click_button 'Attack'
-            expect(page).to have_content('Loses!!!')
+            expect(page).to have_content('Godzilla Loses!!!')
         end
     end
 end

@@ -1,7 +1,7 @@
-def sign_in_and_play
+def sign_in_and_play(computer = false)
     visit('/')
     fill_in :player1, with: 'Godzilla'
-    fill_in :player2, with: 'Kong'
+    fill_in :player2, with: 'Kong' unless computer
     click_button 'FIGHT!'
 end
 

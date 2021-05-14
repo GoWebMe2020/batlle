@@ -3,6 +3,7 @@ require 'sinatra/reloader' if development?
 require './lib/player'
 require './lib/game'
 require './lib/attack'
+require './lib/computer_player'
 
 class Battle < Sinatra::Base
     configure :development do
@@ -17,7 +18,11 @@ class Battle < Sinatra::Base
 
     post '/names' do
         player1 = Player.new(params[:player1])
-        player2 = Player.new(params[:player2])
+        if params[:player2].empty?
+            player2 = ComputerPlayer.new
+        else
+            player2 = Player.new(params[:player2])
+        end
         $game = Game.new(player1, player2)
         redirect '/play'
     end
@@ -39,6 +44,16 @@ class Battle < Sinatra::Base
     get '/attack' do
         @game = $game
         erb :attack
+    end
+
+    post '/heal' do
+        Attack.heal($game.current_turn)
+        redirect '/heal'
+    end
+
+    get '/heal' do
+        @game = $game
+        erb :heal
     end
 
     get '/game-over' do

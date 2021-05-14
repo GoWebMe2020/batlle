@@ -89,8 +89,9 @@ Build a simple game that allows either 2 players or a single player, to battle o
 
 ## Screenshots
 
-![alt text](images/monster.jpg | width=200)
-<img src="images/monster.jpg" width="40%">
+<img src="images/home.jpg" width="33%">
+<img src="images/play.jpg" width="33%">
+<img src="images/game-oveer.jpg" width="33%">
 
 ## Installation
 * Clone the repo

@@ -89,7 +89,7 @@ Build a simple game that allows either 2 players or a single player, to battle o
 
 ## Screenshots
 
-<img src="drawing.jpg" alt="drawing" style="width:200px;"/>
+<img src="images/monster.jpg" alt="monster" style="width:200px;"/>
 
 ## Installation
 * Clone the repo

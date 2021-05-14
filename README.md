@@ -89,9 +89,9 @@ Build a simple game that allows either 2 players or a single player, to battle o
 
 ## Screenshots
 
-<img src="images/home.jpg" width="33%">
-<img src="images/play.jpg" width="33%">
-<img src="images/game-oveer.jpg" width="33%">
+<img src="images/home.jpeg" width="33%">
+<img src="images/play.jpeg" width="33%">
+<img src="images/game-over.jpeg" width="33%">
 
 ## Installation
 * Clone the repo

@@ -87,6 +87,10 @@ Build a simple game that allows either 2 players or a single player, to battle o
 * Sinatra
 * Capybara
 
+## Screenshots
+
+![alt text](images/monster.jpg "imgaes")
+
 ## Installation
 * Clone the repo
 * Run bundle

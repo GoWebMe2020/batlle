@@ -13,8 +13,9 @@ feature 'Attack' do
         sign_in_and_play
         click_button 'Attack'
         click_button 'OK'
-        expect(page).not_to have_content 'Kong: 100HP'
-        expect(page).to have_content 'Kong: 90HP'
+        # allow(Kernel).to receive(:rand).and_return(500)
+        expect(page).not_to have_content 'Kong: F'
+        expect(page).to have_content 'Kong:' # This needs the HP
     end
 
     # As Player 1,
@@ -25,8 +26,9 @@ feature 'Attack' do
         click_button 'Attack'
         click_button 'OK'
         click_button 'Attack'
+        # allow(Kernel).to receive(:rand).and_return(500)
         click_button 'OK'
-        expect(page).not_to have_content 'Godzilla: 100HP'
-        expect(page).to have_content 'Godzilla: 90HP'
+        expect(page).not_to have_content 'Godzilla: F'
+        expect(page).to have_content 'Godzilla:' # This needs the HP
     end
 end

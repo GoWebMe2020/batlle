@@ -1,6 +1,6 @@
 class Player
 
-    DEFAULT_HEALTH = 100
+    DEFAULT_HEALTH = 10000
     attr_reader :name
     attr_reader :health
 
@@ -14,7 +14,7 @@ class Player
     # end
 
     def receive_damage
-        @health -= 10
+        @health -= rand(500..1000)
     end
 
 end

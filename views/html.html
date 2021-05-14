@@ -4,15 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 <body>
 
-    <form action="/attack">
-        <input type="submit" value="Attack">
-    </form>
+<div class="land_page_play">
 
-    <a href="/play">Return</a>
+    <div class="three_boxes">
+        <div class="box_left">
+            <h3><%= @game.player1.name %>: <%= @game.player1.health %>HP</h3>
+            <progress style="width: 500px; height: 40px;"id="file" max="100" value="<%= @game.player1.health %>"></progress>
+            <img src="https://i.pinimg.com/originals/d5/8d/d2/d58dd281de0f27fe36ca3ecbcbcc01a7.jpg" alt="">
+        </div>
+        <div class="box_center">
+            <h3><%= @game.current_turn.name %>'s Turn</h3>
+            <h2>VS</h2>
+        </div>
+        <div class="box_right">
+            <h3><%= @game.player2.name %>: <%= @game.player2.health %>HP</h3>
+            <progress style="width: 500px; height: 40px;"id="file" max="100" value="<%= @game.player2.health %>"></progress>
+        </div>
+    </div>
+        <!-- <div class="head_display">
+            <div class="main_headings">
+                <h3><%= @game.current_turn.name %>'s Turn</h3>
+                <h1><%= @game.player1.name %> vs <%= @game.player2.name %> <br></h1>
+                
+                <h3><%= @game.player1.name %>: <%= @game.player1.health %>HP</h3>
+                <progress style="width: 500px; height: 40px;"id="file" max="100" value="<%= @game.player1.health %>"></progress>
+                <h3><%= @game.player2.name %>: <%= @game.player2.health %>HP</h3>
+                <progress style="width: 500px; height: 40px;"id="file" max="100" value="<%= @game.player2.health %>"></progress>
+            </div>
+        </div> -->
+
+        <div class="land_page_form">
+            <form action="/attack">
+               <div class="fight_button">
+                  <input type="submit" value="Attack">
+               </div>
+            </form>
+        </div>
+        
+    </div>
     
+
+
 </body>
 </html>

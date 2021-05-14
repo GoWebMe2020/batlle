@@ -4,14 +4,10 @@
 }
 
 body {
-    height: 100vh;
-    background-image: url('https://i.pinimg.com/originals/e3/32/4f/e3324fa0efb97657f61ca5995556fdd3.jpg');
-    background-size: cover;
-    mask-repeat: no-repeat;
-    box-shadow: inset 3500px 0 0 0 rgba(0, 0, 0, 0.7);
-    border-color: rgba(0, 0, 0, 1);
     font-family: 'Permanent Marker', cursive;
 }
+
+/* GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME GAME */
 
 .land_page {
     display: flex;
@@ -20,6 +16,11 @@ body {
     text-align: center;
     width: 100%;
     height: 100vh;
+    background-image: url('https://i.pinimg.com/originals/e3/32/4f/e3324fa0efb97657f61ca5995556fdd3.jpg');
+    background-size: cover;
+    mask-repeat: no-repeat;
+    box-shadow: inset 3500px 0 0 0 rgba(0, 0, 0, 0.7);
+    border-color: rgba(0, 0, 0, 1);
 }
 
 .main_headings {
@@ -78,3 +79,73 @@ body {
     font-size: 1.8em;
     letter-spacing: 5px;
 }
+
+/* PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY PLAY */
+
+.land_page_play {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://www.wallpaperflare.com/static/476/1005/194/elder-scrolls-5-skyrim-battle-viking-wallpaper.jpg');
+    background-size: cover;
+    mask-repeat: no-repeat;
+    box-shadow: inset 3500px 0 0 0 rgba(0, 0, 0, 0.7);
+    border-color: rgba(0, 0, 0, 1);
+    color: #fff;
+}
+
+.land_page_play h1 {
+    font-size: 3em;
+    color: red;
+}
+
+.three_boxes {
+    display: flex;
+    justify-content: center;
+}
+
+.three_boxes h3 {
+    font-size: 3em;
+    color: red;
+}
+
+.box_left {
+    width: 33%;
+    height: 60vh;
+    padding-top: 50px;
+}
+
+.box_left img {
+    width: 60%;
+    padding-top: 10%;
+}
+
+.box_center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 33%;
+}
+
+.box_right {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 33%;
+    padding-bottom: 50px;
+}
+
+.box_right img {
+    width: 60%;
+    padding-top: 10%;
+}
+
+.box_right_items {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+

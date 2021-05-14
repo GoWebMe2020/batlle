@@ -4,7 +4,7 @@
 feature 'View health' do
     scenario 'see Player 2 health' do
         sign_in_and_play
-        expect(page).to have_content 'Kong: 100HP'
+        expect(page).to have_content 'Kong: 10000HP'
     end
 
 # As Player 1,
@@ -12,7 +12,7 @@ feature 'View health' do
 # I want to see my own hit points
     scenario 'see Player 1 health' do
         sign_in_and_play
-        expect(page).to have_content 'Godzilla: 100HP'
+        expect(page).to have_content 'Godzilla: 10000HP'
     end
 
 end
